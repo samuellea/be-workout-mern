@@ -13,10 +13,10 @@ const app = express();
 // 📦 middleware
 app.use(express.json()); // this will parse any bodies coming in on requests as JSON, and attaches that on the request object as req.body, so we can access it in the request handlers on our routes
 
-// Use CORS to allow requests from your frontend
+// Use CORS to allow requests only from our frontend on Netlify
 app.use(
   cors({
-    origin: '*', // Allow all origins (for debugging purposes)
+    origin: 'https://workout-mern-sam-lea.netlify.app', // Use our Netlify frontend URL here
   })
 );
 
