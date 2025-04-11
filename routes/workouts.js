@@ -9,9 +9,6 @@ const {
 
 const router = express.Router();
 
-/* '/' is equivalent to '/api/workouts/'
-because we've attached this router to the '/api/workouts' endpoint in backend/server.js */
-
 // GET all workouts
 router.get('/', getWorkouts);
 

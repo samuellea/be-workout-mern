@@ -29,7 +29,6 @@ const createWorkout = async (req, res) => {
   console.log(req.body);
   const { title, reps, load } = req.body;
 
-  // check if any fields on the req.body are empty - if so, store in 'emptyFields' arr
   const emptyFields = Object.keys(req.body).filter(
     (key) => req.body[key].length === 0
   );
