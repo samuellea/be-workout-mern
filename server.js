@@ -31,6 +31,7 @@ mongoose
       console.log('connected to db & listening on port', process.env.PORT);
     });
   })
-  .then((error) => {
-    console.log(error);
+  .catch((error) => {
+    // <-- This should be `.catch()` to properly handle connection errors
+    console.log('Error connecting to MongoDB:', error);
   });
